@@ -1,0 +1,24 @@
+{
+  "name": "adueppen.github.io",
+  "version": "0.1",
+  "homepage": "adueppen.github.io",
+  "authors": [
+    "TheLinuxMinecrafter <fourdoops@gmail.com>"
+  ],
+  "description": "My personal website",
+  "main": "index.html",
+  "license": "none",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.4",
+    "core-elements": "Polymer/core-elements#~0.3.4",
+    "paper-elements": "Polymer/paper-elements#~0.3.4",
+    "core-header-panel": "Polymer/core-header-panel#~0.3.4"
+  }
+}
