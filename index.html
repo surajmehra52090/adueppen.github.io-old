@@ -6,12 +6,10 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <script src="bower_components/platform/platform.js"></script>
   <link rel="import" href="bower_components/font-roboto/roboto.html">
-  <link rel="import"
-    href="bower_components/core-header-panel/core-header-panel.html">
-  <link rel="import"
-    href="bower_components/core-toolbar/core-toolbar.html">
-  <link rel="import"
-    href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
   <style>
   html,body {
     height: 100%;
@@ -36,6 +34,12 @@
     -ms-user-select: none;
     user-select: none;
   }
+  paper-tabs::shadow #selectionBar {
+  	background-color: #ffffff
+  }
+  paper-tab::shadow #ink {
+  	color: #ffffff;
+  }
   .container {
     width: 80%;
     margin: 50px auto;
@@ -44,25 +48,53 @@
     #tabs {
       width: 200px;
     }
-    .container {
-      width: 400px;
+    .card {
+      background: white;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      margin: 16px;
+      border-radius: 2px;
     }
+  }
+  p {
+  	padding: 15px;
   }
   </style>
 </head>
 
 <body unresolved touch-action="auto">
-  <core-header-panel>
+  <core-header-panel mode="waterfall-tall">
     <core-toolbar>
-      <paper-tabs id="tabs" selected="0" self-end>
-        <paper-tab name="home">Home</paper-tab>
-        <paper-tab name="projects">Projects</paper-tab>
-        <paper-tab name="blog">Blog</paper-tab>
+      <paper-tabs id="tabs" selected="0" class="bottom indent" style="width: 300px" self-end>
+        <paper-tab name="home"><p>Home</p></paper-tab>
+        <paper-tab name="projects"><p>Projects</p></paper-tab>
+        <paper-tab name="blog"><p>Blog</p></paper-tab>
+        <paper-tab name="about"><p>About</p></paper-tab>
       </paper-tabs>
     </core-toolbar>
+    <div class="card" layout vertical center>
+      <paper-shadow z="1"></paper-shadow>
+      <p>Bacon ipsum dolor sit amet sirloin fatback beef ground round beef ribs frankfurter shank capicola andouille leberkas doner. Ribeye short ribs fatback turkey shank tongue. Tongue pastrami corned beef turkey. Meatloaf leberkas rump shank biltong turducken kevin brisket porchetta tongue.
 
-    <!-- main page content will go here -->
+Hamburger cow meatloaf, capicola jerky flank filet mignon kevin salami boudin beef ribs chuck. Jowl pig biltong, spare ribs tri-tip landjaeger swine rump. Ribeye shankle frankfurter, sirloin sausage tongue tri-tip tail hamburger kielbasa pork chop jowl tenderloin turducken. T-bone sirloin doner, pork loin frankfurter filet mignon pork chop kielbasa brisket. Sausage drumstick shankle porchetta, hamburger ribeye jowl landjaeger pancetta tenderloin. Ribeye kielbasa biltong capicola venison, shankle landjaeger pork hamburger shank pork belly corned beef flank turkey.
 
+Hamburger t-bone drumstick flank meatloaf. Ham shoulder pancetta tri-tip shankle venison tail. Pancetta kevin boudin corned beef hamburger meatloaf capicola doner turducken biltong. Salami sausage brisket frankfurter ham, jerky pork belly swine chicken fatback tri-tip turducken boudin bresaola sirloin. Pig meatball tri-tip, andouille corned beef beef capicola swine.
+
+Shankle sirloin beef, chuck strip steak kevin short ribs ground round leberkas. Pork tail turducken ground round, t-bone venison boudin tongue pancetta fatback jerky chuck filet mignon porchetta drumstick. Pork loin tongue capicola sausage. Ground round salami ham hock, meatloaf kevin tail short ribs capicola fatback turducken jowl sausage.
+
+Kevin porchetta drumstick frankfurter, boudin tongue flank strip steak. Turducken boudin short loin, beef ribs prosciutto andouille bresaola. Shank venison boudin, shoulder short ribs chuck bresaola kielbasa meatloaf capicola jowl pork chop beef ribs. Bacon cow short ribs, rump ham prosciutto meatball pork belly venison fatback chuck short loin leberkas kevin. Strip steak swine hamburger rump pig pork belly shoulder, kielbasa pastrami corned beef. Rump short loin sausage frankfurter hamburger. Fatback sirloin chuck, meatloaf pastrami ham hock sausage shankle doner.
+
+Chicken tail boudin chuck bresaola ball tip meatball t-bone salami sausage strip steak corned beef. Pancetta tongue frankfurter bacon tri-tip, pork belly doner tenderloin rump turkey bresaola strip steak filet mignon pork loin drumstick. Ground round t-bone capicola pork belly, leberkas pastrami shank meatball turducken. T-bone spare ribs cow pastrami filet mignon tri-tip short loin. Salami t-bone chuck, pork chop hamburger ham hock flank.
+
+Pastrami chuck flank andouille kevin shankle. Brisket leberkas pork loin beef ribeye pork turducken salami bacon bresaola pancetta sirloin. Kielbasa meatball strip steak shankle hamburger brisket ground round cow filet mignon pork chop tongue prosciutto sirloin turkey bresaola. Cow meatball kielbasa, swine andouille pork belly spare ribs tail shoulder ham filet mignon capicola hamburger.
+
+Pork chop chicken kielbasa corned beef, kevin meatball cow drumstick pork loin fatback ham hamburger landjaeger tongue. T-bone spare ribs sirloin turducken tail sausage, ribeye short ribs chicken tri-tip leberkas prosciutto frankfurter ham. Ground round filet mignon cow pork chop ham chicken capicola. Kevin short ribs pancetta chuck capicola pork chop ball tip meatball porchetta shank drumstick venison ground round. Jowl pork chop ball tip, sirloin fatback porchetta boudin bresaola salami turducken. Tenderloin rump brisket ham hock pork, doner porchetta turkey kielbasa venison boudin strip steak tongue shankle biltong.
+
+Meatloaf pork tenderloin, drumstick short ribs bacon turkey fatback tongue. Rump short ribs ground round hamburger prosciutto meatloaf sirloin biltong. Brisket landjaeger prosciutto ham short loin leberkas meatloaf beef sausage fatback. Drumstick sirloin boudin pork chop tri-tip pig shank. Salami turducken shank strip steak, pork chop brisket porchetta shankle pork. Doner shankle ground round tenderloin salami. Sausage spare ribs pig flank prosciutto.
+
+Ball tip jowl capicola landjaeger ham hock spare ribs pork loin boudin shankle beef ribs pancetta swine. Filet mignon boudin tongue leberkas ham hock pork chop meatball pig pork kevin porchetta. Ball tip chicken swine spare ribs bresaola. Pork belly frankfurter hamburger, doner sirloin ham brisket shank andouille swine landjaeger kevin ribeye pastrami meatball. Turducken jerky prosciutto pig, drumstick jowl shank pork loin cow landjaeger.</p>
+    </div>
   </core-header-panel>
   
   <script>
