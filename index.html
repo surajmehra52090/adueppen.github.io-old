@@ -12,6 +12,7 @@
   <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
   <link rel="import" href="bower_components/core-select/core-select.html">
   <link rel="import" href="bower_components/core-pages/core-pages.html">
+  <link rel="import" href="bower_components/polymer/polymer.html">
   <style>
   html,body {
     height: 100%;
@@ -65,16 +66,15 @@
   </style>
 </head>
 <body unresolved touch-action="auto">
-  <core-header-panel mode="waterfall-tall">
-    <core-toolbar>
-      <div horizontal end-justified layout style="width:100%" class="bottom">
-        <paper-tabs id="tabs" selected="0" class="bottom indent" style="width: 300px" self-end>
-          <paper-tab name="home"><p>Home</p></paper-tab>
-          <paper-tab name="projects"><p>Projects</p></paper-tab>
-          <paper-tab name="blog"><p>Blog</p></paper-tab>
-          <paper-tab name="about"><p>About</p></paper-tab>
-        </paper-tabs>
-      </div>
+  <core-header-panel>
+    <core-toolbar class="animate">
+      <span class="bottom" flex></span>
+      <paper-tabs id="tabs" selected="0" class="bottom indent" style="width: 300px" self-end>
+        <paper-tab name="home"><p>Home</p></paper-tab>
+        <paper-tab name="projects"><p>Projects</p></paper-tab>
+        <paper-tab name="blog"><p>Blog</p></paper-tab>
+        <paper-tab name="about"><p>About</p></paper-tab>
+      </paper-tabs>
     </core-toolbar>
     <div class="card" layout vertical center>
       <paper-shadow z="1"></paper-shadow>
