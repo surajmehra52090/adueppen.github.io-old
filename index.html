@@ -8,7 +8,7 @@
   <link rel="import" href="bower_components/font-roboto/roboto.html">
   <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
   <link rel="import" href="bower_components/paper-item/paper-item.html">
-  <link rel="import" href="bower_components/sampler-scaffold-mod">
+  <link rel="import" href="bower_components/sampler-scaffold-mod/sampler-scaffold-mod.html">
   <link rel="import" href="bower_components/polymer/polymer.html">
   <link rel="import" href="bower_components/core-icons/core-icons.html">
   <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
@@ -31,9 +31,12 @@
   </style>
 </head>
 <body unresolved touch-action="auto">
-  <sampler-scaffold label="A. Dueppen" fit>
+  <sampler-scaffold-mod label="A. Dueppen" fit>
     <paper-icon-button class="menuButton" icon="menu"></paper-icon-button>
-
-  </sampler-scaffold>
+    <paper-item label="Home" tag="home" url="home.html"></paper-item>
+    <paper-item label="Blog (NYI)" tag="blog" url="blog.html"></paper-item>
+    <paper-item label="Projects" tag="projects" url="projects.html"></paper-item>
+    <paper-item label="About" tag="about" url="about.html"></paper-item>
+  </sampler-scaffold-mod>
 </body>
 </html>
