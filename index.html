@@ -6,13 +6,12 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
   <script src="bower_components/platform/platform.js"></script>
   <link rel="import" href="bower_components/font-roboto/roboto.html">
-  <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
-  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
-  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
   <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
-  <link rel="import" href="bower_components/core-select/core-select.html">
-  <link rel="import" href="bower_components/core-pages/core-pages.html">
+  <link rel="import" href="bower_components/paper-item/paper-item.html">
+  <link rel="import" href="bower_components/sampler-scaffold-mod">
   <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="import" href="bower_components/core-icons/core-icons.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
   <style>
   html,body {
     height: 100%;
@@ -29,78 +28,12 @@
     background: #5677fc;
     color: white;
   }
-  #tabs {
-    width: 100%;
-    margin: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  paper-tabs::shadow #selectionBar {
-  	background-color: #ffffff
-  }
-  paper-tab::shadow #ink {
-  	color: #ffffff;
-  }
-  .container {
-    width: 80%;
-    margin: 50px auto;
-  }
-  @media (min-width: 481px) {
-    #tabs {
-      width: 200px;
-    }
-    .card {
-      background: white;
-      width: 315px;
-      height: 1024px;
-      position: relative;
-      margin: 16px;
-      border-radius: 2px;
-    }
-  }
-  .home {
-  	padding: 15px 15px 15px 15px;
-    font-size: 16px;
-    color: black;
-  }
   </style>
 </head>
 <body unresolved touch-action="auto">
-  <core-header-panel>
-    <core-toolbar class="animate">
-      <span class="bottom" flex></span>
-      <paper-tabs id="tabs" selected="0" class="bottom indent" style="width: 400px" self-end>
-        <paper-tab name="home"><p>Home</p></paper-tab>
-        <paper-tab name="projects"><p>Projects</p></paper-tab>
-        <paper-tab name="blog"><p>Blog</p></paper-tab>
-        <paper-tab name="about"><p>About</p></paper-tab>
-      </paper-tabs>
-      <core-pages selected="{{$.paper-tabs.selected}}" selectedindex="0" notap id="corePages">
-        <div id="home" active>
-          <div class="card" layout vertical center>
-              <paper-shadow z="1"></paper-shadow>
-              <p class="home">Bacon ipsum dolor sit amet proident dolor rump tail pork loin. Eu ground round beef, laboris turducken excepteur pork chop. Excepteur rump id tenderloin est sirloin ex. Esse bresaola jowl bacon pork belly leberkas incididunt proident nulla short loin cillum eu filet mignon andouille.
+  <sampler-scaffold label="A. Dueppen" fit>
+    <paper-icon-button class="menuButton" icon="menu"></paper-icon-button>
 
-T-bone pastrami cillum non duis voluptate chicken magna ut consequat velit boudin occaecat ribeye tri-tip. Anim mollit tenderloin aliqua short loin, incididunt excepteur. Sirloin cillum et drumstick fugiat. Porchetta ut ham flank jerky kevin pancetta esse labore pig excepteur ball tip andouille. Capicola tempor est, tenderloin pork sirloin consectetur mollit t-bone drumstick salami. Ham strip steak deserunt boudin eu meatball magna jerky tongue ad tri-tip pariatur porchetta shoulder.
-
-Ribeye quis occaecat, aliqua culpa ham meatloaf. Meatball landjaeger anim turducken labore, filet mignon aute laboris bresaola ut pariatur velit. Pork belly nisi turducken tail beef anim duis shoulder id brisket quis. Ribeye sirloin spare ribs veniam cow.
-
-Id laboris sausage pork chop, hamburger corned beef swine incididunt est tri-tip pork loin sint deserunt. In cow aute turkey, tenderloin bacon fugiat. Aliqua beef ribs corned beef pig ut jerky anim deserunt velit chicken pancetta. Culpa tongue enim, est short loin ground round tail ham hock meatloaf in.
-
-Nisi swine laboris reprehenderit ut do tempor irure t-bone dolore chuck in venison consectetur. Duis sint frankfurter meatloaf in venison drumstick laborum ex aute ea pariatur tail. Ullamco frankfurter duis, boudin labore ball tip nulla pig. Irure reprehenderit jowl tail cillum incididunt ut ut commodo ullamco. Swine porchetta pork chop drumstick. Incididunt ball tip id, esse ex magna laborum jowl irure pancetta ut mollit nisi dolore do. Commodo prosciutto tail meatball ea ribeye sint bacon spare ribs.</p></div>
-        </div>
-      </core-pages>
-    </core-toolbar>
-  </core-header-panel>
-  <script>
-    var tabs = document.querySelector('paper-tabs');
-    var pages = document.querySelector('core-pages');
-
-    tabs.addEventListener('core-select',function(){
-      pages.selected = tabs.selected;
-    });
-  </script>
+  </sampler-scaffold>
 </body>
 </html>
