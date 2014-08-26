@@ -1,4 +1,4 @@
-sampler-scaffold
+sampler-scaffold-mod
 ================
 
-See the [component page](http://polymer.github.io/sampler-scaffold) for more information.
+See the [component page](http://adueppen.github.io/sampler-scaffold-mod) for more information.
