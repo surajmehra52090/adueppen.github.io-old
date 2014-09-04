@@ -37,7 +37,7 @@ of the scaffold.
 <link rel="import" href="../core-menu/core-submenu.html">
 <link rel="import" href="../core-icon-button/core-icon-button.html">
 
-<polymer-element name="sampler-scaffold-mod" attributes="label responsiveWidth">
+<polymer-element name="sampler-scaffold-mod" attributes="label responsiveWidth githubUsername">
 <template>
 
   <link rel="stylesheet" href="sampler-scaffold-mod.css">
@@ -51,7 +51,7 @@ of the scaffold.
           <core-icon-button class="menuButton fallback" icon="menu"></core-icon-button>
         </content>
         <div hidden?="{{!narrow}}">{{item.label}}</div>
-        <content select=".sourceButton" on-tap="http://github.com/adueppen/adueppen.github.io">
+        <content select=".sourceButton" on-tap="{{viewSourceAction}}">
           <core-icon-button class="sourceButton fallback" icon="launch"></core-icon-button>
         </content>
 
@@ -213,6 +213,13 @@ of the scaffold.
       }
     },
     
+    viewSourceAction: function() {
+      var main = document.getElementsByTagName("sampler-scaffold-mod");
+      var githubUsername = main.getAttribute(githubUsername);
+      window.open('https://github.com/' + githubUsername,
+          this.item.tag);
+    }
+
   });
 
 </script>
