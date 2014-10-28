@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>App Mockup Thingy</title>
+    <script src="bower_components/platform/platform.js"></script>
+    <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
+    <link rel="import" href="bower_components/font-roboto/roboto.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/core-icons/core-icons.html">
+    <style>
+        body {
+            margin: 0;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        core-header-panel {
+            height: 100%;
+            width: 100%;
+            font-family: 'RobotoDraft', sans-serif;
+        }
+        core-toolbar, paper-tabs {
+            background-color: #00bcd4;
+            color: #fff;
+        }
+        .content {
+            padding: 16px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body fullbleed unresolved>
+    <core-header-panel>
+        <core-toolbar class="medium-tall">
+            <paper-icon-button icon="menu"></paper-icon-button>
+            <div flex>Decibel Checker Mockup Thingy</div>
+            <paper-icon-button icon="more-vert"></paper-icon-button>
+            <div class="bottom fit" horizontal layout>
+                <paper-tabs selected="0" class="bottom fit" flex>
+                    <paper-tab>PRESETS</paper-tab>
+                    <paper-tab>MANUAL</paper-tab>
+                    <paper-tab>AUTO SET</paper-tab>
+                </paper-tabs>
+            </div>
+        </core-toolbar>
+        <div class="content">
+            <paper-item label="Preset 1"></paper-item>
+            <paper-item label="Preset 2"></paper-item>
+        </div>
+    </core-header-panel>
+</body>
+</html>
