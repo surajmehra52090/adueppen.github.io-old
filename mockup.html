@@ -13,6 +13,7 @@
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
     <link rel="import" href="bower_components/core-icons/core-icons.html">
+    <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
     <style>
         body {
             margin: 0;
@@ -27,8 +28,12 @@
             width: 100%;
             font-family: 'RobotoDraft', sans-serif;
         }
-        core-toolbar, paper-tabs {
+        core-toolbar {
             background-color: #00bcd4;
+            color: #fff;
+        }
+        paper-tabs::shadow #id #selectionBar {
+            background-color: #fff;
             color: #fff;
         }
         .content {
@@ -54,10 +59,13 @@
                 </paper-tabs>
             </div>
         </core-toolbar>
-        <div class="content">
-            <paper-item label="Preset 1"></paper-item>
-            <paper-item label="Preset 2"></paper-item>
-        </div>
+        <core-animated-pages class="content">
+            <div class="presets">
+                <paper-item label="Preset 1"></paper-item>
+                <paper-item label="Preset 2"></paper-item>
+            </div>
+            <div class="manualset"></div>
+        </core-animated-pages>
     </core-header-panel>
 </body>
 </html>
