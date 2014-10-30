@@ -14,6 +14,8 @@
     <link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
     <link rel="import" href="bower_components/core-icons/core-icons.html">
     <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
+    <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
+    <link rel="import" href="bower_components/core-animated-pages/transitions/list-cascade.html">
     <style>
         body {
             margin: 0;
@@ -32,15 +34,17 @@
             background-color: #00bcd4;
             color: #fff;
         }
-        paper-tabs::shadow #id #selectionBar {
-            background-color: #fff;
+        paper-tabs.main paper-tab::shadow #ink {
             color: #fff;
         }
-        .content {
+        paper-tabs.main::shadow #selectionBar {
+            background-color: #fff;
+        }
+        .content > * {
             padding: 16px;
         }
-        .content > paper-item {
-            height: 48px;
+        .presets > paper-item {
+            height: 64px;
         }
     </style>
 </head>
@@ -51,7 +55,7 @@
             <div flex>OUCH! Decibel Checker</div>
             <paper-icon-button icon="more-vert"></paper-icon-button>
             <div class="bottom fit" horizontal layout>
-                <paper-tabs selected="0" class="bottom fit" flex>
+                <paper-tabs selected="0" class="bottom fit main" flex>
                     <paper-tab>PRESETS</paper-tab>
                     <paper-tab>MANUAL</paper-tab>
                     <paper-tab>AUTO SET</paper-tab>
@@ -59,13 +63,31 @@
                 </paper-tabs>
             </div>
         </core-toolbar>
-        <core-animated-pages class="content">
+        <core-animated-pages class="content" transitions="hero-transition slide-from-right list-cascade">
             <div class="presets">
-                <paper-item label="Preset 1"></paper-item>
+                <paper-item label="Preset 1" onclick="document.querySelector('core-animated-pages').selected=4"></paper-item>
                 <paper-item label="Preset 2"></paper-item>
             </div>
-            <div class="manualset"></div>
+            <div class="manual">
+                <input type="checkbox">
+            </div>
+            <div class="auto">
+                <input type="color">
+            </div>
+            <div class="calendar">
+                <input type="datetime">
+            </div>
+            <div class="preset1">
+            	Will add soon.
+            </div>
         </core-animated-pages>
     </core-header-panel>
+    <script>
+        var tabs = document.querySelector('paper-tabs');
+        var pages = document.querySelector('core-animated-pages');
+        tabs.addEventListener('core-select', function(){
+            pages.selected = tabs.selected;
+        });
+    </script>
 </body>
 </html>
