@@ -16,6 +16,9 @@
     <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
     <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
     <link rel="import" href="bower_components/core-animated-pages/transitions/list-cascade.html">
+    <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
     <style>
         body {
             margin: 0;
@@ -46,6 +49,21 @@
         .presets > paper-item {
             height: 64px;
         }
+        paper-input {
+            width: 49%;
+        }
+        paper-checkbox.checkbox::shadow #ink[checked] {
+            color: #00bcd4;
+        }
+        paper-checkbox.checkbox::shadow #checkbox.checked {
+            border-color: #00bcd4;
+        }
+        html /deep/ paper-input[focused] .floated-label {
+            color: #00bcd4;
+        }
+        html /deep/ paper-input .cursor, html /deep/ paper-input .focused-underline {
+            background-color: #00bcd4;
+        }
     </style>
 </head>
 <body fullbleed unresolved>
@@ -69,7 +87,9 @@
                 <paper-item label="Preset 2"></paper-item>
             </div>
             <div class="manual">
-                <input type="checkbox">
+                <paper-input class="input" label="Maximum Threshold (decibels)" floatingLabel="true" ></paper-input>
+                <paper-input class="input" label="Location" floatingLabel ></paper-input>
+                <paper-checkbox class="checkbox" label="Ambient Noise"></paper-checkbox>
             </div>
             <div class="auto">
                 <input type="color">
