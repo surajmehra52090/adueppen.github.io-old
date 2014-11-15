@@ -21,6 +21,7 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
     <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
+    <link rel="import" href="bower_components/core-icons/social-icons.html">
     <style>
         body {
             margin: 0;
@@ -74,6 +75,12 @@
 		paper-item > p {
 			position: absolute;
 			top: 8px;
+			left: 64px
+		}
+		paper-item > core-icon {
+			position: absolute;
+			bottom: 12px;
+			left: 6px
 		}
 		paper-item /deep/ paper-ripple {
 			color: #00bcd4;
@@ -97,8 +104,9 @@
         </core-toolbar>
         <core-animated-pages class="content" transitions="hero-transition slide-from-right list-cascade">
             <div class="presets">
-                <paper-shadow animated><paper-item onclick="pressCard()"><p>Preset 1</p></paper-item></paper-shadow>
-                <paper-shadow animated><paper-item onclick="pressCard()"><p>Preset 2</p></paper-item></paper-shadow>
+                <paper-shadow><paper-item><core-icon icon="home"></core-icon><p>Home</p></paper-item></paper-shadow>
+                <paper-shadow><paper-item><core-icon icon="social:school"></core-icon><p>School</p></paper-item></paper-shadow>
+                <paper-shadow><paper-item><core-icon icon="work"></core-icon><p>Work</p></paper-item></paper-shadow>
             </div>
             <div class="manual">
                 <paper-input class="input" label="Maximum Threshold (decibels)" floatingLabel="true" ></paper-input>
