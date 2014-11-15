@@ -20,6 +20,7 @@
     <link rel="import" href="bower_components/paper-input/paper-input.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
+    <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
     <style>
         body {
             margin: 0;
@@ -45,10 +46,7 @@
             background-color: #fff;
         }
         .content > * {
-            padding: 16px;
-        }
-        .presets > paper-item {
-            height: 64px;
+            padding: 12px;
         }
         paper-input {
             width: 49%;
@@ -68,6 +66,18 @@
             width: 15px;
             display: inline;
         }
+		paper-shadow > paper-item {
+			height: 64px;
+			font-size: 16px;
+			margin-bottom: 8px;
+		}
+		paper-item > p {
+			position: absolute;
+			top: 8px;
+		}
+		paper-item /deep/ paper-ripple {
+			color: #00bcd4;
+		}
     </style>
 </head>
 <body fullbleed unresolved>
@@ -87,8 +97,8 @@
         </core-toolbar>
         <core-animated-pages class="content" transitions="hero-transition slide-from-right list-cascade">
             <div class="presets">
-                <paper-item label="Preset 1" onclick="document.querySelector('core-animated-pages').selected=4"></paper-item>
-                <paper-item label="Preset 2"></paper-item>
+                <paper-shadow><paper-item onclick="document.querySelector('core-animated-pages').selected=4"><p>Preset 1</p></paper-item></paper-shadow>
+                <paper-shadow><paper-item><p>Preset 2</p></paper-item></paper-shadow>
             </div>
             <div class="manual">
                 <paper-input class="input" label="Maximum Threshold (decibels)" floatingLabel="true" ></paper-input>
