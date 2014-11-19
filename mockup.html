@@ -22,6 +22,9 @@
     <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
     <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
     <link rel="import" href="bower_components/core-icons/social-icons.html">
+    <link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+    <link rel="import" href="bower_components/core-menu/core-menu.html">
+    <link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
     <style>
         body {
             margin: 0;
@@ -82,12 +85,22 @@
 			bottom: 12px;
 			left: 6px
 		}
-		paper-item /deep/ paper-ripple {
+		paper-shadow > paper-item /deep/ paper-ripple {
 			color: #00bcd4;
+		}
+		html /deep/ paper-dropdown-menu, html /deep/ core-menu {
+			box-sizing: border-box;
+			width: 170px;
+		}
+		#meter {
+			font-size: 15em;
+			position: relative;
+			bottom: 128px;
+			text-align: center;
 		}
     </style>
 </head>
-<body fullbleed unresolved>
+<body fullbleed unresolved onload="randomNumber()">
     <core-header-panel>
         <core-toolbar class="medium-tall">
             <paper-icon-button icon="menu"></paper-icon-button>
@@ -95,14 +108,26 @@
             <paper-icon-button icon="more-vert"></paper-icon-button>
             <div class="bottom fit" horizontal layout>
                 <paper-tabs selected="0" class="bottom fit main" flex>
+                    <paper-tab>METER</paper-tab>
                     <paper-tab>PRESETS</paper-tab>
                     <paper-tab>MANUAL</paper-tab>
-                    <paper-tab>AUTO SET</paper-tab>
                     <paper-tab>CALENDAR</paper-tab>
                 </paper-tabs>
             </div>
         </core-toolbar>
         <core-animated-pages class="content" transitions="hero-transition slide-from-right list-cascade">
+           	<div class="meter">
+            	<paper-dropdown-menu label="Choose A Preset">
+            		<paper-dropdown class="dropdown">
+            			<core-menu class="menu">
+            				<paper-item>Home</paper-item>
+            				<paper-item>School</paper-item>
+            				<paper-item>Work</paper-item>
+            			</core-menu>
+            		</paper-dropdown>
+            	</paper-dropdown-menu>
+            	<p id="meter">64</p>
+            </div>
             <div class="presets">
                 <paper-shadow><paper-item><core-icon icon="home"></core-icon><p>Home</p></paper-item></paper-shadow>
                 <paper-shadow><paper-item><core-icon icon="social:school"></core-icon><p>School</p></paper-item></paper-shadow>
@@ -112,9 +137,6 @@
                 <paper-input class="input" label="Maximum Threshold (decibels)" floatingLabel="true" ></paper-input>
                 <paper-input class="input" label="Location" floatingLabel ></paper-input>
                 <paper-checkbox class="checkbox" label="Ambient Noise"></paper-checkbox>
-            </div>
-            <div class="auto">
-                <input type="color">
             </div>
             <div class="calendar">
                 <div class="calendar-tiles">1</div>
@@ -158,5 +180,12 @@
             pages.selected = tabs.selected;
         });
     </script>
+    <script>
+		function randomNumber(min,max) {
+			document.getElementById('meter').innerHTML = Math.floor(Math.random()*(70-60+1)+60);
+		}
+		randomNumber();
+		setInterval(randomNumber, 500);
+	</script>
 </body>
 </html>
