@@ -98,6 +98,13 @@
 			bottom: 128px;
 			text-align: center;
 		}
+		#db {
+			position: relative;
+			bottom: 455px;
+			left: 67%;
+			font-size: 30px;
+			color: #808080
+		}
     </style>
 </head>
 <body fullbleed unresolved onload="randomNumber()">
@@ -126,7 +133,8 @@
             			</core-menu>
             		</paper-dropdown>
             	</paper-dropdown-menu>
-            	<p id="meter">64</p>
+            	<div class="meterdisplay"><p id="meter">64</p>
+            	<p id="db">dB</p></div>
             </div>
             <div class="presets">
                 <paper-shadow><paper-item><core-icon icon="home"></core-icon><p>Home</p></paper-item></paper-shadow>
@@ -185,7 +193,7 @@
 			document.getElementById('meter').innerHTML = Math.floor(Math.random()*(70-60+1)+60);
 		}
 		randomNumber();
-		setInterval(randomNumber, 500);
+		setInterval(randomNumber, 700);
 	</script>
 </body>
 </html>
