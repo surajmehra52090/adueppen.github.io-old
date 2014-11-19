@@ -34,10 +34,15 @@
             -o-user-select: none;
             user-select: none;
         }
+		::scrollbar {
+			display: none;
+		}
         core-header-panel {
             height: 100%;
-            width: 100%;
+            width: 102%;
             font-family: 'RobotoDraft', sans-serif;
+			overflow: hidden;
+			overflow-y: hidden;
         }
         core-toolbar {
             background-color: #00bcd4;
@@ -101,9 +106,9 @@
 		#db {
 			position: relative;
 			bottom: 455px;
-			left: 67%;
+			left: 81%;
 			font-size: 30px;
-			color: #808080
+			color: #808080;
 		}
     </style>
 </head>
