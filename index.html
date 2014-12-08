@@ -18,101 +18,105 @@
   <link rel="import" href="bower_components/core-pages/core-pages.html">
   <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
   <style>
-			body {
-				font-family: 'RobotoDraft', sans;
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				-o-user-select: none;
-				user-select: none;
-				height: 100%
-		}
-		template {
-				height: 100%;
-				width: 100%;
+		body {
+			font-family: 'RobotoDraft', sans;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+			height: 100%;
+			width: 100%;
 		}
 		core-drawer-panel, core-header-panel {
-				height: 100%;
-				width: 100%;
-				background-color: #fff;
+			height: 100%;
+			width: 100%;
+			background-color: #fff;
 		}
 		core-toolbar {
-				background-color: #5677fc;
-				color: #fff;
+			background-color: #5677fc;
+			color: #fff;
 		}
 		html /deep/ paper-item {
-				height: 64px;
+			height: 64px;
 		}
 		paper-item > p {
-				position: absolute;
-				top: 8px;
+			position: absolute;
+			top: 8px;
 		}
 		core-pages > * {
-				height: 100%;
-				width: 100%;
+			height: 100%;
+			width: 100%;
 		}
 		#welcome {
-				font-size: 64px;
-				margin-left: 72px;
+			font-size: 64px;
+			margin-left: 72px;
 		}
 		.hometext {
-				margin-left: 72px;
+			margin-left: 72px;
 		}
 		.projects > paper-shadow {
-				height: 400px;
-				margin: 16px 16px 8px 16px;
+			height: 400px;
+			margin: 16px 16px 8px 16px;
+		}
+		.drawerContent {
+			height: 192px;
+			width: 256px;
+		}
+		core-selector {
+			position: absolute;
+			height: 192px;
+			width: 256px;
 		}
   </style>
 </head>
 <body unresolved>
-  	<template is="auto-binding">
-  	<core-drawer-panel responsiveWidth="860px">
-  		<core-header-panel drawer>
-  			<core-toolbar>
-  				<p>A. Dueppen</p>
-  			</core-toolbar>
-  			<div class="content">
-  				<core-selector selected="0" selectedAttribute="">
-  					<paper-item core-drawer-toggle onclick="document.querySelector('span').innerHTML='Home'"><p core-drawer-toggle>Home</p></paper-item>
-  					<paper-item core-drawer-toggle onclick="document.querySelector('span').innerHTML='Projects'"><p core-drawer-toggle>Projects</p></paper-item>
-  					<paper-item core-drawer-toggle onclick="document.querySelector('span').innerHTML='About'"><p core-drawer-toggle>About</p></paper-item>
-  				</core-selector>
+  <core-drawer-panel responsiveWidth="860px">
+  	<core-header-panel drawer>
+  		<core-toolbar>
+  			<p>A. Dueppen</p>
+  		</core-toolbar>
+  		<div class="content drawerContent">
+  			<core-selector selected="0" selectedAttribute="">
+  				<paper-item onclick="document.querySelector('span').innerHTML='Home'; document.querySelector('core-drawer-panel').closeDrawer()" flex><p>Home</p></paper-item>
+  				<paper-item onclick="document.querySelector('span').innerHTML='Projects'; document.querySelector('core-drawer-panel').closeDrawer()" flex><p>Projects</p></paper-item>
+  				<paper-item onclick="document.querySelector('span').innerHTML='About'; document.querySelector('core-drawer-panel').closeDrawer()" flex><p>About</p></paper-item>
+  			</core-selector>
+  		</div>
+  	</core-header-panel>
+  	<core-header-panel main>
+  		<core-toolbar>
+  			<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
+  			<span>Home</span>
+  		</core-toolbar>
+  		<core-pages class="content">
+  			<div class="home">
+  				<p id="welcome">Welcome!</p>
+  				<p class="hometext">Pick a category from the menu to the left.</p>
   			</div>
-  		</core-header-panel>
-  		<core-header-panel main>
-  			<core-toolbar>
-  				<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
-  				<span>Home</span>
-  			</core-toolbar>
-  			<core-pages class="content">
-  				<div class="home">
-  					<p id="welcome">Welcome!</p>
-  					<p class="hometext">Pick a category from the menu to the left.</p>
-  				</div>
-  				<div class="projects">
-  					<paper-shadow><div class="projectCard project1">Coming soon</div></paper-shadow>
-  					<paper-shadow><div class="projectCard project1"></div></paper-shadow>
-  				</div>
-  				<div class="about">Coming soon</div>
-  			</core-pages>
-  		</core-header-panel>
-  	</core-drawer-panel>
-  	<script>
-			var items = document.querySelector('core-selector');
-			var pages = document.querySelector('core-pages');
-			items.addEventListener('core-select', function(){
-				pages.selected = items.selected;
-			});
-		</script>
-  	<script>
-  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  			<div class="projects">
+  				<paper-shadow><div class="projectCard project1">Coming soon</div></paper-shadow>
+  				<paper-shadow><div class="projectCard project1"></div></paper-shadow>
+  			</div>
+  			<div class="about">Coming soon</div>
+  		</core-pages>
+  	</core-header-panel>
+  </core-drawer-panel>
+  <script>
+		var items = document.querySelector('core-selector');
+		var pages = document.querySelector('core-pages');
+		items.addEventListener('core-select', function(){
+			pages.selected = items.selected;
+		});
+	</script>
+  <script>
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  		ga('create', 'UA-53422958-1', 'auto');
-  		ga('send', 'pageview');
-  	</script>
-	</template>
+  	ga('create', 'UA-53422958-1', 'auto');
+  	ga('send', 'pageview');
+  </script>
 </body>
 </html>
