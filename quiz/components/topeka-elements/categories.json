@@ -21,83 +21,24 @@
             },
             {
                 "type": "true-false",
-                "question": "Coffee beans contain more caffeine than tea leaves.",
+                "question": "Telling lies about someone is protected by the First Amendment.",
                 "answer": false
             },
             {
-                "type": "multi-select",
-                "question": "What are the three ingredients in mead (spices excluded)?",
-                "options": [
-                    "Sugar",
-                    "Honey",
-                    "Cinnamon",
-                    "Water",
-                    "Brown Sugar",
-                    "Yeast",
-                    "Salt"
-                ],
-                "answer": [1,3,5]
+                "type": "true-false",
+                "question": "Your parents can force you to practice a certain religion.",
+                "answer": false
             },
             {
                 "type": "four-quarter",
-                "question": "What crop does the Colorado Beetle attack?",
+                "question": "What is not protected by the First Amendment?",
                 "options": [
-                    "Corn",
-                    "Garlic",
-                    "Potato",
-                    "Wheat"
+                    "Burning an American flag that belongs to you",
+                    "Wearing a shirt with a slogan that may offend some people",
+                    "Saying something mean about your Social Studies teacher",
+                    "Protesting a law in a peaceful march"
                 ],
                 "answer": [2]
-            },
-            {
-                "type": "single-select-item",
-                "question": "What vegetable did Mark Twain describe as “cabbage with a college education”?",
-                "options": [
-                    "Spinach",
-                    "Broccoli",
-                    "Cauliflower",
-                    "Kale"
-                ],
-                "answer": [2]
-            },
-            {
-                "type": "fill-blank",
-                "question": "What name is given to a sugar syrup which is gently heated until it browns?",
-                "answer": "Caramel"
-            },
-            {
-                "type": "single-select",
-                "question": "In Which city was chop suey invented?",
-                "options": [
-                    "Hong Kong",
-                    "Taipei",
-                    "New York",
-                    "San Francisco"
-                ],
-                "answer": [3]
-            },
-            {
-                "type": "picker",
-                "question": "One of the fattiest fishes is salmon. 4 ounces contains how many grams of fat?",
-                "min": 1,
-                "max": 10,
-                "answer": 9
-            },
-            {
-                "type": "fill-blank",
-                "question": "In which American State did chili con carne originate?",
-                "answer": "Texas"
-            },
-            {
-                "type": "four-quarter",
-                "question": "What is the correct name for a cluster or bunch of bananas?",
-                "options": [
-                    "Foot",
-                    "Hand",
-                    "Flock",
-                    "Pod"
-                ],
-                "answer": [1]
             }
         ]
     },
