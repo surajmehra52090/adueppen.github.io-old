@@ -1,19 +1,23 @@
 [
     {
-        "name": "Food & Drink",
-        "id": "food",
+        "name": "First Amendment",
+        "id": "first",
         "theme": "green",
         "quizzes": [
             {
-                "type": "four-quarter",
-                "question": "Name the Italian, semi-soft, rich cheese with blue veins through it.",
+                "type": "multi-select",
+                "question": "Which options are given by the Fist Amendment?",
                 "options": [
-                    "Ricotta",
-                    "Blue Cheese",
-                    "Gorgonzola",
-                    "Parmesan"
+                    "Freedom of Movement",
+                    "Freedom of Religion",
+                    "Right to a Fair Trial",
+                    "Freedom of Speech",
+                    "Freedom of Expression",
+                    "Freedom to Murder",
+                    "Freedom of Assembly",
+                    "Right to Petition"
                 ],
-                "answer": [2]
+                "answer": [1,3,4,6,7]
             },
             {
                 "type": "true-false",
