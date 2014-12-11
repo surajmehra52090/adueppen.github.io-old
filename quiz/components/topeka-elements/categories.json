@@ -146,12 +146,9 @@
         "theme": "green",
         "quizzes": [
             {
-                "type": "fill-two-blanks",
-                "question": "What are the protections of the Eighth Amendment?",
-                "answer": [
-					"excessive bail",
-					"cruel and unusual punishment"
-				]
+                "type": "fill-blank",
+                "question": "What are the protections of the Eighth Amendment against?",
+                "answer": "excessive bail, cruel and unusual punishment"
             },
             {
                 "type": "true-false",
@@ -201,12 +198,9 @@
                 "answer": [1]
             },
             {
-                "type": "fill-two-blanks",
+                "type": "fill-blank",
                 "question": "Powers not given to the national government by the Constitution are given to whom?",
-                "answer": [
-            		"the states",
-            		"the people"
-                ]
+                "answer": "the states, the people"
             }
         ]
     }
