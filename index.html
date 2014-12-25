@@ -61,6 +61,7 @@
 		.projects > paper-shadow {
 			height: 400px;
 			margin: 16px 16px 8px 16px;
+			width: ;
 		}
 		.drawerContent {
 			height: 192px;
@@ -71,28 +72,35 @@
 			height: 192px;
 			width: 256px;
 		}
-	  	paper-fab {
+	  paper-fab {
 			background-color: #2196f3;
 			position: fixed;
 			bottom: 16px;
 			right: 16px;
 			z-index: 50;
 		}
-	  	.shadow1 {
+	  .shadow1 {
 			background-image: url(resources/images/banner.png);
 			background-size: cover;
 		}
 	  .desc {
-		  width: 95%;
+			width: inherit;
 		  position: absolute;
-		  margin: 0;
 		  margin-left: 16px;
 		  bottom: 0;
+			right: 0;
+			left: 0;
 		  background-color: rgba(255, 255, 255, .7);
+			display: block;
 	  }
 	  .descTitle {
 		  font-size: 34px;
 	  }
+		.about > * {
+			margin-left: 72px;
+			margin-top: 36px;
+			font-size: 18px;
+		}
   </style>
 </head>
 <body unresolved>
@@ -130,7 +138,9 @@
 				</paper-shadow>
   				<paper-shadow class="shadow2"></paper-shadow>
   			</div>
-  			<div class="about">Coming soon</div>
+  			<div class="about">
+					<p>I am a Wisconsin-based student, web developer, technology enthusiast, casual gamer, and an overall geek.</p>
+				</div>
   		</core-pages>
   	</core-header-panel>
   </core-drawer-panel>
