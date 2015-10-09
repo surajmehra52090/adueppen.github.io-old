@@ -1,1 +1,1 @@
-Speakers and microphones are basically the same thing, just moving the electricity in different directions. If you plug a speaker into a microhpone plus on your computer, it'll function as a low quality microphone.
+Speakers and microphones are basically the same thing, just moving the electricity in different directions. If you plug a speaker into a microhpone jack on your computer, it'll function as a low quality microphone.
